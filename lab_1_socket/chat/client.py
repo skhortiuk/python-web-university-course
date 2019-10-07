@@ -23,11 +23,7 @@ if __name__ == "__main__":
     while 1:
         socket_list = [sys.stdin, s]
 
-        read_sockets, write_sockets, error_sockets = select.select(
-            socket_list,
-            [],
-            []
-        )
+        read_sockets, _, _ = select.select(socket_list, [], [])
 
         for sock in read_sockets:
             if sock == s:
@@ -39,7 +35,6 @@ if __name__ == "__main__":
                     prompt()
 
             else:
-
                 msg = sys.stdin.readline()
                 s.send(msg.encode())
                 prompt()

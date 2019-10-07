@@ -1,7 +1,7 @@
 from socket import socket, AF_INET, SOCK_STREAM
 import threading
 
-HOST: str = "0.0.0.0"
+HOST: str = "127.0.0.1"
 PORT: int = 8001
 clients: dict = {}
 
