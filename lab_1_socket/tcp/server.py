@@ -2,7 +2,7 @@ import socket
 import threading
 
 HOST = "127.0.0.1"
-PORT = 8000
+PORT = 8001
 
 
 def client_handler(conn: socket.socket):

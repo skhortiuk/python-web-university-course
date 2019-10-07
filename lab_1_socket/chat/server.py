@@ -1,6 +1,5 @@
 from socket import socket, AF_INET, SOCK_STREAM
 import threading
-from typing import Union
 
 HOST: str = "0.0.0.0"
 PORT: int = 8001
