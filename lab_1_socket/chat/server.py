@@ -15,7 +15,7 @@ def register_user(connection: socket, address: str):
         username = connection.recv(1024).decode().rstrip()
         if 2 < len(username) > 14:
             connection.send(
-                "<- [admin] -> Choose another username\n".encode()
+                "<- [admin] Choose another username\n".encode()
             )
             continue
         connection.send(
@@ -23,7 +23,7 @@ def register_user(connection: socket, address: str):
             f"chat;)\n".encode()
         )
         clients[address] = {"conn": connection, "username": username}
-        cast_msg(address, f"Entered the room, say welcom\n")
+        cast_msg(address, f"Entered the room, say welcome\n")
         return
 
 
