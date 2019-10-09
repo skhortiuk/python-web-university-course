@@ -8,14 +8,9 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/links")
+@app.route("/contacts")
 def links():
-    return render_template("links.html")
-
-
-@app.route("/login")
-def login():
-    return render_template("login.html")
+    return render_template("contacts.html")
 
 
 if __name__ == '__main__':
